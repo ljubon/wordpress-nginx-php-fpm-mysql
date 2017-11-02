@@ -1,0 +1,9 @@
+# Working directories
+wordpress/*
+db-data/*
+logs/*
+nginx/*
+
+!nginx/wordpress.conf
+!docker-compose.yml
+

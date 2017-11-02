@@ -5,5 +5,5 @@
   - docker-engine
   - docker-compose
   
-git clone 
+git clone \
 docker stack deploy -c docker-compose.yml wordpress-nginx-php-fpm

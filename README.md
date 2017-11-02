@@ -7,6 +7,7 @@
   
 1) git clone https://github.com/ljubon/wordpress-nginx-php-fpm-mysql.git 
 2) docker stack deploy -c docker-compose.yml wordpress-nginx-php-fpm wp
+3) [VERIFICATION] docker service ps wp_nginx wp_mysql wp_wordpress OR docker service ls
 
 # Images
 

@@ -2,28 +2,35 @@ version: "3.3"
 services:
   nginx:
       image: nginx:latest
+      deploy:
+        restart_policy:
+          condition: 'any'
       ports:
           - '80:80'
       volumes:
           - ./nginx:/etc/nginx/conf.d
           - ./logs/nginx:/var/log/nginx
           - ./wordpress:/var/www/html
-      links:
+      depends_on:
           - wordpress
-      restart: always
   
   mysql:
       image: mariadb
+      deploy:
+        restart_policy:
+          condition: 'any'
       ports:
           - '3306:3306'
       volumes:
           - ./db-data:/var/lib/mysql
       environment:
           - MYSQL_ROOT_PASSWORD=superman
-      restart: always
 
   wordpress:
       image: wordpress:4.7.1-php7.0-fpm
+      deploy:
+        restart_policy:
+          condition: 'any'
       ports:
           - '9000:9000'
       volumes:
@@ -33,6 +40,5 @@ services:
           - WORDPRESS_TABLE_PREFIX=wp_
           - WORDPRESS_DB_HOST=mysql
           - WORDPRESS_DB_PASSWORD=superman
-      links:
+      depends_on:
           - mysql
-      restart: always

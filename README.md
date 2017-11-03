@@ -4,6 +4,9 @@
 1) docker-engine
 2) docker-compose
   
+
+# Deploy services 
+
 1) git clone https://github.com/ljubon/wordpress-nginx-php-fpm-mysql.git 
 2) ./docker-deploy.sh
 3) [VERIFICATION] \

@@ -25,6 +25,6 @@ WordPress - wordpress:4.7.1-php7.0-fpm
 
 https://hub.docker.com/_/wordpress/ \
 https://hub.docker.com/_/nginx/ \
-https://hub.docker.com/_/mariadb/ \
+https://hub.docker.com/_/mariadb/ 
 
 To start WordPress setup, open browser and open: http://[host IP]

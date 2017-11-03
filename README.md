@@ -8,9 +8,13 @@
 # Deploy services 
 
 1) git clone https://github.com/ljubon/wordpress-nginx-php-fpm-mysql.git 
-2) ./docker-deploy.sh
-3) [VERIFICATION] \
-  - docker service ps wp_nginx wp_mysql wp_wordpress OR docker service ls
+2) cd wordpress-nginx-php-fpm-mysql/
+2) ./run.sh
+
+
+# VERIFICATION] 
+  - docker service ps wp_nginx wp_mysql wp_wordpress
+  - docker service ls
   - docker stack ls
 
 # Images
